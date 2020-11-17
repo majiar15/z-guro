@@ -43,11 +43,12 @@ exports.getOneEps = function(req, res) {
             }else if(err){
                 res.status(400).send("hubo un error en la peticion ", err);
             }else {
+                console.log("object");
                 res.status(200).send(Findeps);
             }
         });
     }else{
-        res.status(400).send("no se mando el parametro de eps");
+        res.status(400).send("no se mando la id de la eps");
 
     }
 }

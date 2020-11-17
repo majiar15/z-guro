@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-
+const epsRouter = require('./router/epsRouter');
 
 
 
@@ -28,6 +28,7 @@ db.once('open', () =>{
 })
 
 
+app.use('/api', epsRouter)
 
 app.listen(app.get('port'), ()=>{
     console.log("server corriendo");

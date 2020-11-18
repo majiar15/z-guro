@@ -9,4 +9,4 @@ let epsSchema = new Schema({
     long: Number
 });
 
-module.exports = mongoose.model('eps', epsSchema);
+module.exports = mongoose.model('eps', epsSchema,'eps');
